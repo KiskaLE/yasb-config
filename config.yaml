@@ -30,17 +30,18 @@ bars:
       right: 8
     widgets:
       left:
-      - "home"
-      - "komorebi_control"
-      - "glazewm_workspaces"
+        - "home"
+        - "komorebi_control"
+        - "glazewm_workspaces"
+        - "taskbar"
       center:
-      - "clock"
+        - "clock"
       right:
-      - "media"
-      - "weather"
-      - "volume"
-      - "notifications"
-      - "power_menu"
+        - "media"
+        - "weather"
+        - "volume"
+        - "notifications"
+        - "power_menu"
 widgets:
   komorebi_control:
     type: "komorebi.control.KomorebiControlWidget"
@@ -180,8 +181,8 @@ widgets:
         round_corners: True
         round_corners_type: "normal"
         border_color: None
-        alignment: 'right'
-        direction: 'down'
+        alignment: "right"
+        direction: "down"
       callbacks:
         on_middle: "toggle_label"
         on_right: "toggle_mute"
@@ -223,8 +224,8 @@ widgets:
         enabled: true
         color: "black"
         radius: 3
-        offset: [ 1, 1 ]
-      app_icons: 
+        offset: [1, 1]
+      app_icons:
         enabled_populated: false
         enabled_active: false
         size: 16
@@ -233,3 +234,22 @@ widgets:
         hide_duplicates: false
         hide_floating: false
       animation: false
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 16
+      tooltip: false
+      show_only_visible: false
+      strict_filtering: false
+      monitor_exclusive: false
+      animation:
+        enabled: true
+      preview:
+        enabled: true
+        width: 450
+        delay: 400
+        padding: 12
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
