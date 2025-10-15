@@ -1,1 +1,1 @@
-C:\Users\<username>\.config\yasb
+C:\Users\<username>\\.config\yasb
